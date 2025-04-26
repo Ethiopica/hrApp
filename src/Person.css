@@ -1,0 +1,7 @@
+.personList {
+  padding: 40px;
+  background-color: rgb(3, 7, 47);
+  margin: 10px;
+  display: inline-block;
+  border-radius: 10px;
+}

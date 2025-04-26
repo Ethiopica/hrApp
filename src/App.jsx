@@ -1,18 +1,26 @@
 
-import Header from './Header';
-import Footer from './Footer';
-import Person from './Person';
-import './App.css'
+import Header from "./Header";
+import Footer from "./Footer";
+import PersonList from "./PersonList";
+import PersonCard from "./PersonCard";
+import {employees} from "./EmployeeData";
+import "./App.css"
 
 const App = () => {
-  return (<div> 
+  return (
+  <> 
   <Header name="HR App" />
   <main>
-  <Person name="Elias" title="CEO" salary="50000" phone="0403232573" email="eliobais@gmail.com" animal="Not Fox"/>
+    <div className="boxes">
+    {employees.map(employee => (
+  <PersonList key={employees.id} {...employee}/>
+    ))}
+    <PersonCard />
+   </div>
   </main>
   <Footer name="Copy right @ REACT25K"/>
-  </div>
+ </>
   );
 };
  
-export default App
+export default App;
