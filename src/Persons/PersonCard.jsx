@@ -1,3 +1,4 @@
+import "./Person.css";
 const PersonCard = () => {
     return (
         <div>

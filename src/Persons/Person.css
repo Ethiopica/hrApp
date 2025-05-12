@@ -1,0 +1,137 @@
+/* Person.css */
+
+/* Main container for the list of employees */
+.personList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px;
+}
+
+/* Style for each individual employee card */
+.personCard {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.personCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the employee's name */
+.personCard p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Title and name have slightly larger font */
+.personCard p.name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #af4cac;
+}
+
+/* Style for the special message (like recognition or probation review) */
+.personCard .specialMessage {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ff5722;
+  margin-top: 10px;
+}
+
+/* Styling for employee's skills */
+.personCard .skills {
+  font-size: 14px;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Add some padding around the container */
+.personList p {
+  margin-bottom: 5px;
+}
+
+/* Style for a specific message (like loading or error) */
+.personList .message {
+  font-size: 18px;
+  text-align: center;
+  color: #f44336;
+  margin-top: 20px;
+}
+
+div.personList div {
+  background-color: #03743a;
+  border-radius: 10px;
+}
+
+/* Person.css */
+
+/* Main container for the list of employees */
+.personList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px;
+}
+
+/* Style for each individual employee card */
+.personList div {
+  width: 300px;
+  padding: 20px;
+  background-color: #6d7758; /* Background color of the card */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #fff; /* Text color */
+}
+
+.personList div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Title and name have slightly larger font */
+.personList div p.name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+/* Style for the special message (like recognition or probation review) */
+.personList div .specialMessage {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ff5722;
+  margin-top: 10px;
+}
+
+/* Styling for employee's skills */
+.personList div .skills {
+  font-size: 14px;
+  color: #fff;
+  margin-top: 10px;
+}
+
+/* Styling for each paragraph inside the cards */
+.personList div p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #fff;
+}
+
+/* Style for a specific message (like loading or error) */
+.personList .message {
+  font-size: 18px;
+  text-align: center;
+  color: #f44336;
+  margin-top: 20px;
+}
