@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router';
 import PersonList from './Persons/PersonList';
 import PersonCard from './Persons/PersonCard';
 import { employees } from './data/EmployeeData';

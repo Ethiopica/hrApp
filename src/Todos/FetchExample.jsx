@@ -13,11 +13,11 @@ const FetchExample = () => {
         console.error("Error fetching posts:", error);
       })
       .finally(() => {
-        setLoading(false);
+        setTimeout(() => setLoading(false), 1000); // ✅ delay setLoading(false)
       });
   }, []);
 
-  return loading ? (
+  return loading ? ( // ✅ correct ternary
     <p>Loading...</p>
   ) : (
     <div>
@@ -29,3 +29,4 @@ const FetchExample = () => {
 };
 
 export default FetchExample;
+

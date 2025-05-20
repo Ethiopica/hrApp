@@ -5,7 +5,7 @@ import PersonCard from "../Persons/PersonCard";
 import PersonList from "../Persons/PersonList";
 import { employees } from "../data/EmployeeData";
 
-const Em = () => (
+const Employees = () => (
   <>
     <main>
       <div className="boxes">
@@ -19,7 +19,4 @@ const Em = () => (
   </>
 );
 
-export default Em;
-
-    
-    
+export default Employees;

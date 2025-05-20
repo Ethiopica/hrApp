@@ -1,71 +1,71 @@
 /* AddEmployeeForm.css */
 
-.addEmployeeForm {
-  width: 100%;
-  max-width: 900px;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+div.add-employee-form {
+  width: 500px;
+}
+.add-employee-form {
+  max-width: 700px;
   margin: 40px auto;
   padding: 30px;
-  border-radius: 12px;
-  background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
-.addEmployeeForm h1 {
+.add-employee-form h1 {
   text-align: center;
-  font-size: 28px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   color: #333;
 }
 
-.formRow {
+.add-employee-form form {
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+}
+
+.add-employee-form input {
+  padding: 10px 12px;
   margin-bottom: 15px;
-  flex-wrap: wrap; /* allows wrapping on smaller screens */
-}
-
-.formRow input {
-  flex: 1;
-  padding: 12px 15px;
-  border: 1px solid #bbb;
+  border: 1px solid #ccc;
   border-radius: 6px;
-  font-size: 16px;
-  background-color: #fff;
-  transition: border 0.3s ease, box-shadow 0.3s ease;
-  min-width: 200px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+  font-family: "Montserrat", sans-serif;
 }
 
-.formRow input:focus {
+.add-employee-form select {
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+  font-family: "Montserrat", sans-serif;
+}
+
+.add-employee-form input:focus {
+  border-color: #007bff;
   outline: none;
-  border-color: #4a90e2;
-  box-shadow: 0 0 5px rgba(74, 144, 226, 0.4);
 }
 
-.addEmployeeForm button {
-  padding: 14px;
+.add-employee-form button {
+  padding: 10px 15px;
+  background-color: #41d6bb;
+  color: white;
+  font-size: 15px;
   border: none;
   border-radius: 6px;
-  background-color: #007bff;
-  color: #fff;
-  font-size: 17px;
-  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  width: 100%;
+  transition: background-color 0.2s ease;
+  font-family: "Montserrat", sans-serif;
 }
 
-.addEmployeeForm button:hover {
-  background-color: #0056b3;
-  transform: translateY(-2px);
-}
-
-.addEmployeeForm .formMessage {
-  font-size: 16px;
+.form-message {
+  margin-top: 15px;
   color: green;
   text-align: center;
-  margin-top: 15px;
-}
-
-div.add-employee-form {
+  font-weight: bold;
 }

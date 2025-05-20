@@ -93,14 +93,27 @@ const AddEmployeeForm = () => {
 
   return (
     <div className="add-employee-form">
-      <h1>Add New Employee</h1>
+      <h1>New Employee Form</h1>
       <form onSubmit={handleSubmit}>
         <input type="text" name="name" placeholder="Name" value={formData.name} onChange={handleChange} />
         <input type="text" name="title" placeholder="Title" value={formData.title} onChange={handleChange} />
         <input type="number" name="salary" placeholder="Salary" value={formData.salary} onChange={handleChange} />
         <input type="text" name="phone" placeholder="Phone" value={formData.phone} onChange={handleChange} />
         <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} />
-        <input type="text" name="animal" placeholder="Favorite Animal (e.g. 🐶)" value={formData.animal} onChange={handleChange} />
+     
+        <select name="animal" value={formData.animal} onChange={handleChange}>
+        <option value="">Choose your favorite animal</option>
+        <option value="🐶">Dog</option>
+        <option value="🐱">Cat</option>
+        <option value="🐰">Rabbit</option>
+        <option value="🦁">Lion</option>
+        <option value="🐯">Tiger</option>
+        <option value="🐵">Monkey</option>
+        <option value="🐸">Frog</option>
+        <option value="🐢">Turtle</option>
+        <option value="🐍">Snake</option>
+        <option value="🦜">Parrot</option>
+        </select>
         <input type="date" name="startDate" value={formData.startDate} onChange={handleChange} />
         <input type="location" name="location" placeholder="Location" value={formData.location} onChange={handleChange} />
         <input type="text" name="department" placeholder="Department" value={formData.department} onChange={handleChange} />

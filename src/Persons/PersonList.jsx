@@ -38,30 +38,56 @@ const calculateMonthsWorked = (startDate) => {
 };
 
 const PersonList = () => {
-  const [employees, setEmployees] = useState([]); // State to store employees data
-  const [loading, setLoading] = useState(true); // State to track loading status
-  const [error, setError] = useState(null); // State to track errors
+  const [employees, setEmployees] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [editingField, setEditingField] = useState(null); // { id, field }
+  const [editValue, setEditValue] = useState("");
 
   useEffect(() => {
-    // Fetch employee data from backend API
-    axios
-      .get("http://localhost:3001/employees")
-      .then((response) => {
-        setEmployees(response.data); // Set employee data from response
-        setLoading(false); // Set loading to false
-      })
-      .catch((err) => {
-        setError(err.message); // Set error message if request fails
-        setLoading(false); // Set loading to false
-      });
-  }, []); // Empty dependency array means this runs once when the component mounts
+    fetchEmployees();
+  }, []);
+
+  const fetchEmployees = async () => {
+    try {
+      const response = await axios.get("http://localhost:3001/employees");
+      setEmployees(response.data);
+      setLoading(false);
+    } catch (err) {
+      setError("Failed to fetch employees");
+      setLoading(false);
+    }
+  };
+
+  const startEditing = (id, field, currentValue) => {
+    setEditingField({ id, field });
+    setEditValue(currentValue);
+  };
+
+  const saveChanges = async (id) => {
+    try {
+      const updatedField = {
+        [editingField.field]: editingField.field === "skills"
+          ? editValue.split(",").map((skill) => skill.trim())
+          : editValue,
+      };
+
+      await axios.patch(`http://localhost:3001/employees/${id}`, updatedField);
+
+      setEditingField(null);
+      setEditValue("");
+      fetchEmployees();
+    } catch (err) {
+      setError("Failed to update employee");
+    }
+  };
 
   if (loading) {
-    return <p>Loading...</p>; // Show loading message while data is being fetched
+    return <p>Loading...</p>;
   }
 
   if (error) {
-    return <p>Error: {error}</p>; // Show error message if there was an issue with the request
+    return <p>Error: {error}</p>;
   }
 
   return (
@@ -78,19 +104,119 @@ const PersonList = () => {
         }
 
         return (
-          <div key={employee.id}>
+          <div key={employee.id} className="personCard">
             <p>Name: {employee.name}</p>
             <p>Title: {employee.title}</p>
-            <p>Salary: {employee.salary}</p>
+
+            {/* Editable Salary */}
+            <p>
+              Salary:{" "}
+              {editingField?.id === employee.id && editingField?.field === "salary" ? (
+                <>
+                  <input
+                    type="text"
+                    value={editValue}
+                    onChange={(e) => setEditValue(e.target.value)}
+                  />
+                  <button onClick={() => saveChanges(employee.id)}>Save</button>
+                  <button onClick={() => setEditingField(null)}>Cancel</button>
+                </>
+              ) : (
+                <>
+                  {employee.salary}
+                  <button onClick={() => startEditing(employee.id, "salary", employee.salary)}>
+                    Edit
+                  </button>
+                </>
+              )}
+            </p>
+
             <p>Phone: {employee.phone}</p>
             <p>Email: {employee.email}</p>
             <p>Animal: {employee.animal}</p>
             <p>Start Date: {employee.startDate}</p>
             <p>Years Worked: {yearsWorked}</p>
             {specialMessage}
-            <p>Location: {employee.location}</p>
-            <p>Department: {employee.department}</p>
-            <p>Skills: {employee.skills.join(", ")}</p>
+
+            {/* Editable Location */}
+            <p>
+              Location:{" "}
+              {editingField?.id === employee.id && editingField?.field === "location" ? (
+                <>
+                  <input
+                    type="text"
+                    value={editValue}
+                    onChange={(e) => setEditValue(e.target.value)}
+                  />
+                  <button onClick={() => saveChanges(employee.id)}>Save</button>
+                  <button onClick={() => setEditingField(null)}>Cancel</button>
+                </>
+              ) : (
+                <>
+                  {employee.location}
+                  <button onClick={() => startEditing(employee.id, "location", employee.location)}>
+                    Edit
+                  </button>
+                </>
+              )}
+            </p>
+
+            {/* Editable Department */}
+            <p>
+              Department:{" "}
+              {editingField?.id === employee.id && editingField?.field === "department" ? (
+                <>
+                  <input
+                    type="text"
+                    value={editValue}
+                    onChange={(e) => setEditValue(e.target.value)}
+                  />
+                  <button onClick={() => saveChanges(employee.id)}>Save</button>
+                  <button onClick={() => setEditingField(null)}>Cancel</button>
+                </>
+              ) : (
+                <>
+                  {employee.department}
+                  <button
+                    onClick={() => startEditing(employee.id, "department", employee.department)}
+                  >
+                    Edit
+                  </button>
+                </>
+              )}
+            </p>
+
+            {/* Editable Skills */}
+            <p>
+              Skills:{" "}
+              {editingField?.id === employee.id && editingField?.field === "skills" ? (
+                <>
+                  <input
+                    type="text"
+                    value={editValue}
+                    onChange={(e) => setEditValue(e.target.value)}
+                    placeholder="Comma-separated skills"
+                  />
+                  <button onClick={() => saveChanges(employee.id)}>Save</button>
+                  <button onClick={() => setEditingField(null)}>Cancel</button>
+                </>
+              ) : (
+                <>
+                  {Array.isArray(employee.skills) ? employee.skills.join(", ") : "N/A"}
+                  <button
+                    onClick={() =>
+                      startEditing(
+                        employee.id,
+                        "skills",
+                        Array.isArray(employee.skills) ? employee.skills.join(", ") : ""
+                      )
+                    }
+                  >
+                    Edit
+                  </button>
+                </>
+              )}
+            </p>
           </div>
         );
       })}
@@ -99,7 +225,6 @@ const PersonList = () => {
 };
 
 export default PersonList;
-
 
 
 

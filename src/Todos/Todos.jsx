@@ -1,6 +1,7 @@
-// src/components/Todos.jsx
+// Todos.js
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import TodoCard from './TodoCard';
 import './Todos.css';
 
 const Todos = () => {
@@ -24,7 +25,11 @@ const Todos = () => {
 
         setTodos(todosRes.data);
         setUsers(usersRes.data);
-        setLoading(false);
+
+        // Add a 1.5-second loading delay
+        setTimeout(() => {
+          setLoading(false);
+        }, 1500);
       } catch (err) {
         console.error('Fetch error:', err);
         setError(err.message || 'Something went wrong while fetching data.');
@@ -48,49 +53,40 @@ const Todos = () => {
     })
     .filter((todo) => {
       if (userFilter === 'all') return true;
-      return todo.userId === parseInt(userFilter);
+      return todo.userId === Number(userFilter);
     });
 
   if (loading) return <p>Loading todos...</p>;
   if (error) return <p style={{ color: 'red' }}>Error: {error}</p>;
 
   return (
-    <div>
+    <div className="todo-container">
       <h2>Todo List</h2>
 
       {/* Filter Controls */}
-      <div style={{ marginBottom: '1rem' }}>
-        <label>
-          Status:&nbsp;
-          <select value={statusFilter} onChange={(e) => setStatusFilter(e.target.value)}>
-            <option value="all">All</option>
-            <option value="completed">Completed ✅</option>
-            <option value="not_completed">Not Completed ❌</option>
-          </select>
-        </label>
+      <div className="filters">
+        <label>Filter by Status:</label>
+        <select value={statusFilter} onChange={(e) => setStatusFilter(e.target.value)}>
+          <option value="all">All</option>
+          <option value="completed">Completed ✅</option>
+          <option value="not_completed">Not Completed ❌</option>
+        </select>
 
-        &nbsp;&nbsp;
-
-        <label>
-          User:&nbsp;
-          <select value={userFilter} onChange={(e) => setUserFilter(e.target.value)}>
-            <option value="all">All Users</option>
-            {users.map((user) => (
-              <option key={user.id} value={user.id}>
-                {user.name}
-              </option>
-            ))}
-          </select>
-        </label>
+        <label>Filter by User:</label>
+        <select value={userFilter} onChange={(e) => setUserFilter(e.target.value)}>
+          <option value="all">All Users</option>
+          {users.map((user) => (
+            <option key={user.id} value={user.id}>
+              {user.name}
+            </option>
+          ))}
+        </select>
       </div>
 
       {/* Todo List */}
-      <ul>
+      <ul className="todo-list">
         {filteredTodos.slice(0, 20).map((todo) => (
-          <li key={todo.id}>
-            <strong>{todo.title}</strong> — by {getUserName(todo.userId)}{' '}
-            {todo.completed ? '✅' : '❌'}
-          </li>
+          <TodoCard key={todo.id} todo={todo} userName={getUserName(todo.userId)} />
         ))}
       </ul>
     </div>

@@ -1,6 +1,10 @@
 /* Person.css */
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 /* Main container for the list of employees */
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
 .personList {
   display: flex;
   flex-wrap: wrap;
@@ -13,7 +17,6 @@
 .personCard {
   width: 300px;
   padding: 20px;
-  border: 1px solid #ddd;
   border-radius: 8px;
   background-color: #f9f9f9;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -30,6 +33,7 @@
   margin: 5px 0;
   font-size: 16px;
   color: #333;
+  font-weight: 300;
 }
 
 /* Title and name have slightly larger font */
@@ -56,6 +60,7 @@
 
 /* Add some padding around the container */
 .personList p {
+  font-family: "Montserrat", sans-serif;
   margin-bottom: 5px;
 }
 
@@ -68,7 +73,7 @@
 }
 
 div.personList div {
-  background-color: #03743a;
+  background-color: #edede9;
   border-radius: 10px;
 }
 
@@ -116,6 +121,7 @@ div.personList div {
 
 /* Styling for employee's skills */
 .personList div .skills {
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   color: #fff;
   margin-top: 10px;
@@ -125,7 +131,7 @@ div.personList div {
 .personList div p {
   margin: 5px 0;
   font-size: 16px;
-  color: #fff;
+  color: black;
 }
 
 /* Style for a specific message (like loading or error) */
@@ -134,4 +140,11 @@ div.personList div {
   text-align: center;
   color: #f44336;
   margin-top: 20px;
+}
+
+div.personCard p button {
+  background-color: #d8f3dc;
+  width: 50px;
+  height: 20px;
+  border-radius: 5px;
 }
