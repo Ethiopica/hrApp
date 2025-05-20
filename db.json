@@ -4,7 +4,7 @@
       "id": "1",
       "name": "Jari Turpeinen",
       "title": "CNC Machinist",
-      "salary": 5000,
+      "salary": "20000",
       "phone": "+35840234576",
       "email": "trurpainen@gmail.com",
       "animal": "Cat 🐈",
@@ -21,7 +21,7 @@
       "id": "2",
       "name": "Ville",
       "title": "Welding",
-      "salary": 4500,
+      "salary": "10000",
       "phone": "+35846578976",
       "email": "ville@gmail.com",
       "animal": "Fox 🦊",
@@ -38,7 +38,7 @@
       "id": "3",
       "name": "Hekki",
       "title": "Lecturer",
-      "salary": 5700,
+      "salary": "10000",
       "phone": "+358567890",
       "email": "hekki@gmail.com",
       "animal": "Penguin 🐧",
@@ -162,7 +162,7 @@
       "email": "jack.thompson@example.com",
       "animal": "Dove 🕊️",
       "startDate": "2009-09-09",
-      "location": "Atlanta",
+      "location": "Addis Ababa",
       "department": "IT",
       "skills": [
         "Helpdesk",
@@ -330,6 +330,181 @@
       "skills": [
         "Care",
         "Hoito"
+      ]
+    },
+    {
+      "id": "b05e111111111",
+      "name": "Elias Bekele Tekle",
+      "title": "Do",
+      "salary": 1000,
+      "phone": "0403232573",
+      "email": "eliobais@gmail.com",
+      "animal": "Lion",
+      "startDate": "2025-05-12",
+      "location": "Lahti",
+      "department": "Nursing",
+      "skills": [
+        "Care",
+        "Hoito"
+      ]
+    },
+    {
+      "id": "b05e1111111111",
+      "name": "Elias Bekele Tekle",
+      "title": "Doctorla Candidate",
+      "salary": 2500,
+      "phone": "0403232573",
+      "email": "eliobais@gmail.com",
+      "animal": "Cat",
+      "startDate": "2023-01-01",
+      "location": "Lappeenranta ",
+      "department": "Civil Engeenering ",
+      "skills": [
+        "Drawing",
+        "Surveying"
+      ]
+    },
+    {
+      "id": "b05e11111111111",
+      "name": "Elias Bekele Tekle",
+      "title": "Lecturer",
+      "salary": 4560,
+      "phone": "0403232573",
+      "email": "eliobais@gmail.com",
+      "animal": "Camel",
+      "startDate": "2009-09-24",
+      "location": "Jimma ",
+      "department": "Management ",
+      "skills": [
+        "Teaching",
+        "Research and Consultancy"
+      ]
+    },
+    {
+      "id": "b05e111111111111",
+      "name": "Elias Bekele Tekle",
+      "title": "Lecturer",
+      "salary": 10000,
+      "phone": "0403232573",
+      "email": "eliobais@gmail.com",
+      "animal": "Sheep",
+      "startDate": "2025-05-13",
+      "location": "Jimma ",
+      "department": "Management",
+      "skills": [
+        "Teaching",
+        "Research and Consultancy"
+      ]
+    },
+    {
+      "id": "f5de1",
+      "name": "Elias Bekele Tekle",
+      "title": "L",
+      "salary": 2345,
+      "phone": "0403232573",
+      "email": "eliobais@gmail.com",
+      "animal": "Dog",
+      "startDate": "2025-05-13",
+      "location": "Jimma ",
+      "department": "Management ",
+      "skills": [
+        "Teaching"
+      ]
+    },
+    {
+      "id": "f5de11",
+      "name": "Melkam Mmo",
+      "title": "Nurese ",
+      "salary": 2000,
+      "phone": "0403232573",
+      "email": "eliobais@gmail.com",
+      "animal": "Cat",
+      "startDate": "2023-06-19",
+      "location": "Lahti",
+      "department": "Nurse",
+      "skills": [
+        "Helping",
+        "care"
+      ]
+    },
+    {
+      "id": "f5de111",
+      "name": "Shihab ",
+      "title": "Doctoral candidate ",
+      "salary": 100000,
+      "phone": "11221",
+      "email": "w31@gmail.com",
+      "animal": "got",
+      "startDate": "2025-05-19",
+      "location": "Lahti",
+      "department": "Production",
+      "skills": [
+        "CNC Lathe"
+      ]
+    },
+    {
+      "id": "f5de1111",
+      "name": "Solomon Haile",
+      "title": "Musicial",
+      "salary": 100000,
+      "phone": "+2519132455",
+      "email": "solohaile@gmail.com",
+      "animal": "Bird",
+      "startDate": "2014-01-16",
+      "location": "Mekele",
+      "department": "Music",
+      "skills": [
+        "Singing",
+        "Lyrics writing",
+        "perfrorming"
+      ]
+    },
+    {
+      "id": "f5de11111",
+      "name": "Elias Bekele Tekle",
+      "title": "lecturer",
+      "salary": 2000,
+      "phone": "0403232573",
+      "email": "eliobais@gmail.com",
+      "animal": "🐶",
+      "startDate": "2025-05-01",
+      "location": "Lahti",
+      "department": "Help",
+      "skills": [
+        "Dancing"
+      ]
+    },
+    {
+      "id": "f5de111111",
+      "name": "Feven Genene",
+      "title": "Accountant",
+      "salary": 15000,
+      "phone": "+251920564543",
+      "email": "feven@yahoo.com",
+      "animal": "🐢",
+      "startDate": "2023-01-19",
+      "location": "Gondor",
+      "department": "Finance ",
+      "skills": [
+        "Auditing",
+        "Book Keeping",
+        "Budget allocation."
+      ]
+    },
+    {
+      "id": "f5de1111111",
+      "name": "Danawit Solomon",
+      "title": "Nothing ",
+      "salary": 90000,
+      "phone": "+2518909098",
+      "email": "dan@yahoo.com",
+      "animal": "🐵",
+      "startDate": "2025-05-20",
+      "location": "Gondor",
+      "department": "Civil Engeenering ",
+      "skills": [
+        "Teaching",
+        "Research and Consultancy"
       ]
     }
   ]
