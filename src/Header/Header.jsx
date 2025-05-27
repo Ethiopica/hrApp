@@ -11,10 +11,9 @@ const Header = ({ name }) => {
       </div>
       <nav>
         <ul>
-          <NavLink to="/">Home</NavLink>
+          <NavLink to="/about">About</NavLink>
           <NavLink to="/employees">Employees</NavLink>
           <NavLink to="/add">Add new Employees</NavLink>
-          <NavLink to="/about">About</NavLink>
           <NavLink to="/todos">Todos</NavLink>
           <NavLink to="/fetchexample">Fetch with Axios</NavLink>
         </ul>

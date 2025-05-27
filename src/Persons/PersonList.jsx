@@ -29,7 +29,6 @@ const calculateMonthsWorked = (startDate) => {
   const monthDiff = now.getMonth() - start.getMonth();
   const totalMonths = yearDiff * 12 + monthDiff;
 
-  // Account for partial month
   if (now.getDate() < start.getDate()) {
     return totalMonths - 1;
   }
@@ -41,7 +40,7 @@ const PersonList = () => {
   const [employees, setEmployees] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [editingField, setEditingField] = useState(null); // { id, field }
+  const [editingField, setEditingField] = useState(null);
   const [editValue, setEditValue] = useState("");
 
   useEffect(() => {
@@ -67,9 +66,10 @@ const PersonList = () => {
   const saveChanges = async (id) => {
     try {
       const updatedField = {
-        [editingField.field]: editingField.field === "skills"
-          ? editValue.split(",").map((skill) => skill.trim())
-          : editValue,
+        [editingField.field]:
+          editingField.field === "skills"
+            ? editValue.split(",").map((skill) => skill.trim())
+            : editValue,
       };
 
       await axios.patch(`http://localhost:3001/employees/${id}`, updatedField);
@@ -79,6 +79,18 @@ const PersonList = () => {
       fetchEmployees();
     } catch (err) {
       setError("Failed to update employee");
+    }
+  };
+
+  const deleteEmployee = async (id) => {
+    const confirmDelete = window.confirm("Are you sure you want to delete this employee?");
+    if (!confirmDelete) return;
+
+    try {
+      await axios.delete(`http://localhost:3001/employees/${id}`);
+      setEmployees((prevEmployees) => prevEmployees.filter((emp) => emp.id !== id));
+    } catch (err) {
+      setError("Failed to delete employee");
     }
   };
 
@@ -123,7 +135,7 @@ const PersonList = () => {
                 </>
               ) : (
                 <>
-                  {employee.salary}
+                  {employee.salary}&nbsp;
                   <button onClick={() => startEditing(employee.id, "salary", employee.salary)}>
                     Edit
                   </button>
@@ -153,7 +165,7 @@ const PersonList = () => {
                 </>
               ) : (
                 <>
-                  {employee.location}
+                  {employee.location}&nbsp;
                   <button onClick={() => startEditing(employee.id, "location", employee.location)}>
                     Edit
                   </button>
@@ -176,9 +188,11 @@ const PersonList = () => {
                 </>
               ) : (
                 <>
-                  {employee.department}
+                  {employee.department}&nbsp;
                   <button
-                    onClick={() => startEditing(employee.id, "department", employee.department)}
+                    onClick={() =>
+                      startEditing(employee.id, "department", employee.department)
+                    }
                   >
                     Edit
                   </button>
@@ -202,13 +216,17 @@ const PersonList = () => {
                 </>
               ) : (
                 <>
-                  {Array.isArray(employee.skills) ? employee.skills.join(", ") : "N/A"}
+                  {Array.isArray(employee.skills)
+                    ? employee.skills.join(", ")
+                    : "N/A"}&nbsp;
                   <button
                     onClick={() =>
                       startEditing(
                         employee.id,
                         "skills",
-                        Array.isArray(employee.skills) ? employee.skills.join(", ") : ""
+                        Array.isArray(employee.skills)
+                          ? employee.skills.join(", ")
+                          : ""
                       )
                     }
                   >
@@ -217,6 +235,14 @@ const PersonList = () => {
                 </>
               )}
             </p>
+
+            {/* Horizontal line before delete */}
+            <hr style={{ marginTop: "1rem", marginBottom: "1rem" }} />
+
+            {/* ❌ Delete Button */}
+            <button onClick={() => deleteEmployee(employee.id)} className="deleteBtn">
+              ❌ Delete
+            </button>
           </div>
         );
       })}
@@ -225,6 +251,7 @@ const PersonList = () => {
 };
 
 export default PersonList;
+
 
 
 

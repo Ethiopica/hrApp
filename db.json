@@ -1,23 +1,6 @@
 {
   "employees": [
     {
-      "id": "1",
-      "name": "Jari Turpeinen",
-      "title": "CNC Machinist",
-      "salary": "20000",
-      "phone": "+35840234576",
-      "email": "trurpainen@gmail.com",
-      "animal": "Cat 🐈",
-      "startDate": "2025-06-15",
-      "location": "Tampere",
-      "department": "Production",
-      "skills": [
-        "CNC milling",
-        "CNC Lathe",
-        "Manual milling"
-      ]
-    },
-    {
       "id": "2",
       "name": "Ville",
       "title": "Welding",
@@ -43,7 +26,7 @@
       "email": "hekki@gmail.com",
       "animal": "Penguin 🐧",
       "startDate": "2019-01-22",
-      "location": "Jyväsylä",
+      "location": "London ",
       "department": "Production",
       "skills": [
         "Auto CAD inventor",
@@ -55,7 +38,7 @@
       "id": "4",
       "name": "David Lee",
       "title": "Data Analyst",
-      "salary": 78000,
+      "salary": "30000",
       "phone": "555-4321",
       "email": "david.lee@example.com",
       "animal": "Dog 🦮",
@@ -65,7 +48,8 @@
       "skills": [
         "SQL",
         "Python",
-        "Tableau"
+        "Tableau",
+        "Next.js"
       ]
     },
     {
@@ -120,23 +104,6 @@
       ]
     },
     {
-      "id": "8",
-      "name": "Henry Patel",
-      "title": "Finance Analyst",
-      "salary": 83000,
-      "phone": "555-3344",
-      "email": "henry.patel@example.com",
-      "animal": "Duck 🦆",
-      "startDate": "2019-07-18",
-      "location": "San Diego",
-      "department": "Finance",
-      "skills": [
-        "Excel",
-        "Forecasting",
-        "Budgeting"
-      ]
-    },
-    {
       "id": "9",
       "name": "Isla Green",
       "title": "Marketing Specialist",
@@ -157,7 +124,7 @@
       "id": "10",
       "name": "Jack Thompson",
       "title": "IT Support",
-      "salary": 62000,
+      "salary": "620006000",
       "phone": "555-7788",
       "email": "jack.thompson@example.com",
       "animal": "Dove 🕊️",
@@ -179,48 +146,6 @@
       "email": "eliobais@gmail.com",
       "animal": "Cat",
       "startDate": "2020-04-02",
-      "department": "Production",
-      "skills": [
-        "CNC Lathe"
-      ]
-    },
-    {
-      "id": "b05e1",
-      "name": "Elias Bekele Tekle",
-      "title": "Lecturer",
-      "salary": 10000,
-      "phone": "0403232573",
-      "email": "eliobais@gmail.com",
-      "animal": "Lion",
-      "startDate": "2019-11-02",
-      "department": "Production",
-      "skills": [
-        "Teaching"
-      ]
-    },
-    {
-      "id": "11",
-      "name": "Elias Bekele Tekle",
-      "title": "Lecturer",
-      "salary": 15000,
-      "phone": "0403232573",
-      "email": "eliobais@gmail.com",
-      "animal": "Lion",
-      "startDate": "2025-04-02",
-      "department": "Production",
-      "skills": [
-        "CNC Lathe"
-      ]
-    },
-    {
-      "id": "11",
-      "name": "Elias Bekele Tekle",
-      "title": "er",
-      "salary": 312,
-      "phone": "0403232573",
-      "email": "eliobais@gmail.com",
-      "animal": "Lion",
-      "startDate": "2025-05-06",
       "department": "Production",
       "skills": [
         "CNC Lathe"
@@ -257,21 +182,6 @@
       ]
     },
     {
-      "id": "b05e1111",
-      "name": "t",
-      "title": "t",
-      "salary": 4,
-      "phone": "0403232573",
-      "email": "eliobais@gmail.com",
-      "animal": "Dog",
-      "startDate": "2025-05-06",
-      "location": "Lahti",
-      "department": "Nursing",
-      "skills": [
-        "CNC Lathe"
-      ]
-    },
-    {
       "id": "b05e11111",
       "name": "Elias Bekele Tekle",
       "title": "Lecturer",
@@ -305,7 +215,7 @@
       "id": "b05e1111111",
       "name": "Elias Bekele Tekle",
       "title": "yu",
-      "salary": 989,
+      "salary": "10000",
       "phone": "0403232573",
       "email": "eliobais@gmail.com",
       "animal": "Lion",
@@ -314,117 +224,6 @@
       "department": "Production",
       "skills": [
         "CNC Lathe"
-      ]
-    },
-    {
-      "id": "b05e11111111",
-      "name": "Elias Bekele Tekle",
-      "title": "Doctor",
-      "salary": 19000,
-      "phone": "0403232573",
-      "email": "eliobais@gmail.com",
-      "animal": "Horse",
-      "startDate": "2015-02-12",
-      "location": "Lahti",
-      "department": "Nursing",
-      "skills": [
-        "Care",
-        "Hoito"
-      ]
-    },
-    {
-      "id": "b05e111111111",
-      "name": "Elias Bekele Tekle",
-      "title": "Do",
-      "salary": 1000,
-      "phone": "0403232573",
-      "email": "eliobais@gmail.com",
-      "animal": "Lion",
-      "startDate": "2025-05-12",
-      "location": "Lahti",
-      "department": "Nursing",
-      "skills": [
-        "Care",
-        "Hoito"
-      ]
-    },
-    {
-      "id": "b05e1111111111",
-      "name": "Elias Bekele Tekle",
-      "title": "Doctorla Candidate",
-      "salary": 2500,
-      "phone": "0403232573",
-      "email": "eliobais@gmail.com",
-      "animal": "Cat",
-      "startDate": "2023-01-01",
-      "location": "Lappeenranta ",
-      "department": "Civil Engeenering ",
-      "skills": [
-        "Drawing",
-        "Surveying"
-      ]
-    },
-    {
-      "id": "b05e11111111111",
-      "name": "Elias Bekele Tekle",
-      "title": "Lecturer",
-      "salary": 4560,
-      "phone": "0403232573",
-      "email": "eliobais@gmail.com",
-      "animal": "Camel",
-      "startDate": "2009-09-24",
-      "location": "Jimma ",
-      "department": "Management ",
-      "skills": [
-        "Teaching",
-        "Research and Consultancy"
-      ]
-    },
-    {
-      "id": "b05e111111111111",
-      "name": "Elias Bekele Tekle",
-      "title": "Lecturer",
-      "salary": 10000,
-      "phone": "0403232573",
-      "email": "eliobais@gmail.com",
-      "animal": "Sheep",
-      "startDate": "2025-05-13",
-      "location": "Jimma ",
-      "department": "Management",
-      "skills": [
-        "Teaching",
-        "Research and Consultancy"
-      ]
-    },
-    {
-      "id": "f5de1",
-      "name": "Elias Bekele Tekle",
-      "title": "L",
-      "salary": 2345,
-      "phone": "0403232573",
-      "email": "eliobais@gmail.com",
-      "animal": "Dog",
-      "startDate": "2025-05-13",
-      "location": "Jimma ",
-      "department": "Management ",
-      "skills": [
-        "Teaching"
-      ]
-    },
-    {
-      "id": "f5de11",
-      "name": "Melkam Mmo",
-      "title": "Nurese ",
-      "salary": 2000,
-      "phone": "0403232573",
-      "email": "eliobais@gmail.com",
-      "animal": "Cat",
-      "startDate": "2023-06-19",
-      "location": "Lahti",
-      "department": "Nurse",
-      "skills": [
-        "Helping",
-        "care"
       ]
     },
     {
@@ -444,67 +243,18 @@
     },
     {
       "id": "f5de1111",
-      "name": "Solomon Haile",
-      "title": "Musicial",
-      "salary": 100000,
-      "phone": "+2519132455",
-      "email": "solohaile@gmail.com",
-      "animal": "Bird",
-      "startDate": "2014-01-16",
-      "location": "Mekele",
-      "department": "Music",
-      "skills": [
-        "Singing",
-        "Lyrics writing",
-        "perfrorming"
-      ]
-    },
-    {
-      "id": "f5de11111",
       "name": "Elias Bekele Tekle",
-      "title": "lecturer",
-      "salary": 2000,
+      "title": "dr",
+      "salary": 1234567,
       "phone": "0403232573",
       "email": "eliobais@gmail.com",
-      "animal": "🐶",
-      "startDate": "2025-05-01",
-      "location": "Lahti",
-      "department": "Help",
-      "skills": [
-        "Dancing"
-      ]
-    },
-    {
-      "id": "f5de111111",
-      "name": "Feven Genene",
-      "title": "Accountant",
-      "salary": 15000,
-      "phone": "+251920564543",
-      "email": "feven@yahoo.com",
-      "animal": "🐢",
-      "startDate": "2023-01-19",
-      "location": "Gondor",
-      "department": "Finance ",
-      "skills": [
-        "Auditing",
-        "Book Keeping",
-        "Budget allocation."
-      ]
-    },
-    {
-      "id": "f5de1111111",
-      "name": "Danawit Solomon",
-      "title": "Nothing ",
-      "salary": 90000,
-      "phone": "+2518909098",
-      "email": "dan@yahoo.com",
-      "animal": "🐵",
-      "startDate": "2025-05-20",
-      "location": "Gondor",
+      "animal": "🐱",
+      "startDate": "2025-05-26",
+      "location": "Jimma ",
       "department": "Civil Engeenering ",
       "skills": [
-        "Teaching",
-        "Research and Consultancy"
+        "Care",
+        "Hoito"
       ]
     }
   ]
