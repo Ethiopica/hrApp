@@ -1,0 +1,112 @@
+.books {
+  padding: 2rem;
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+  background-color: var(--background-color);
+  min-height: calc(100vh - 200px);
+}
+
+main {
+  background: linear-gradient(
+    135deg,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .boxes {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .boxes {
+    transition: none;
+  }
+}
+
+.bookCard {
+  background-color: white;
+  color: #333;
+  margin: 1rem;
+  border-radius: 10px;
+  width: 30%;
+  min-height: 200px;
+  position: relative;
+}
+
+.bookCard button {
+  margin-right: 0.5rem;
+}
+
+.bookCard-header {
+  border-radius: 10px 10px 0 0;
+  text-align: left;
+  padding: 2rem 1rem 1rem;
+}
+
+.bookCard-content {
+  text-align: left;
+  padding: 0 1rem 1rem;
+}
+
+.bookCard-footer {
+  border-top: 1px solid #dbdbdb;
+  text-align: left;
+  padding: 1rem;
+}
+
+.favIcon {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 20px;
+}
+.price {
+  font-size: 1.5rem;
+  text-align: right;
+}
+.genre {
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.stock {
+  background-color: #f0ead2;
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 5px;
+  color: white;
+  position: absolute;
+  top: -0.5rem;
+  left: -0.5rem;
+}
+
+.outOf {
+  background-color: grey;
+}
+
+input {
+  padding: 1rem;
+  font-family: inherit;
+  font-size: inherit;
+  border-radius: 5px;
+  border: none;
+  margin: 1rem;
+}

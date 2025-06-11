@@ -1,47 +1,52 @@
-/* General Styles */
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-body {
-  background-color: rgb(19, 76, 57);
-  color: white;
-  font-family: Arial, sans-serif;
+/* Layout */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
 }
 
 /* Header Styles */
 header {
-  padding: 40px;
-  background-color: rgb(3, 3, 30);
-  min-width: 320px;
-  display: block;
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  padding: var(--spacing-lg) var(--spacing-xl);
   text-align: center;
-  font-size: 24px;
-  color: white;
+  box-shadow: var(--card-shadow);
+  position: relative;
+  z-index: 10;
+}
+
+header h1 {
+  font-size: var(--font-size-h2);
+  margin: 0;
+  font-weight: 600;
 }
 
 /* Main Content */
 main {
-  background: linear-gradient(135deg, rgb(45, 93, 75), #377436);
-  padding: 20px;
-  min-height: 60vh;
+  flex: 1;
+  background: linear-gradient(
+    135deg,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+  padding: var(--spacing-xl);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 
 /* Footer Styles */
 footer {
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(3, 3, 30);
-  min-width: 320px;
-  color: white;
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  padding: var(--spacing-md) var(--spacing-xl);
+  text-align: center;
+  box-shadow: var(--card-shadow);
 }
 
 /* Paragraph Styles */
@@ -54,21 +59,73 @@ p {
 
 /* Person Component Styling */
 .person {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  color: black;
-  max-width: 400px;
+  background: var(--card-bg);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--card-shadow);
+  width: min(100%, 400px);
+  transition: transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+  border: 1px solid var(--border-color);
+}
+
+.person:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow);
 }
 
 .person h2 {
-  margin-bottom: 10px;
-  color: #333;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+  font-weight: 600;
 }
 
 .person p {
-  margin: 5px 0;
-  color: #666;
+  color: var(--card-text);
+  margin: var(--spacing-sm) 0;
+  line-height: var(--line-height-base);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    padding: var(--spacing-md);
+  }
+  
+  header,
+  footer {
+    padding: var(--spacing-md);
+  }
+  
+  .person {
+    width: 100%;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.person {
+  animation: fadeIn var(--transition-slow) ease-out;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .person {
+    animation: none;
+    transition: none;
+  }
+  
+  .person:hover {
+    transform: none;
+  }
 }
