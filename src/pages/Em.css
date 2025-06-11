@@ -2,12 +2,43 @@
   padding: 2rem;
 }
 
-div.boxes {
+.boxes {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  margin: 2rem;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+  background-color: var(--background-color);
+  min-height: calc(100vh - 200px);
+}
+
+main {
+  background: linear-gradient(
+    135deg,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .boxes {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .boxes {
+    transition: none;
+  }
 }
 
 .bookCard {

@@ -1,8 +1,8 @@
 import { Outlet } from "react-router";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
-import PersonCard from "../Persons/PersonCard";
-import PersonList from "../Persons/PersonList";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
+import PersonCard from "../components/Persons/PersonCard";
+import PersonList from "../components/Persons/PersonList";
 import { employees } from "../data/EmployeeData";
 
 const Em = () => (

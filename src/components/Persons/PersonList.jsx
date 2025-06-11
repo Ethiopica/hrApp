@@ -239,9 +239,9 @@ const PersonList = () => {
             {/* Horizontal line before delete */}
             <hr style={{ marginTop: "1rem", marginBottom: "1rem" }} />
 
-            {/* ❌ Delete Button */}
+            {/* Delete Button */}
             <button onClick={() => deleteEmployee(employee.id)} className="deleteBtn">
-              ❌ Delete
+              Delete
             </button>
           </div>
         );

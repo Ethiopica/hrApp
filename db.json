@@ -10,7 +10,7 @@
       "animal": "Fox 🦊",
       "startDate": "2009-03-10",
       "location": "Männtä-Vilppula",
-      "department": "Production",
+      "department": "Production, Marketing",
       "skills": [
         "Gass Welding",
         "3D printing",
@@ -21,12 +21,12 @@
       "id": "3",
       "name": "Hekki",
       "title": "Lecturer",
-      "salary": "10000",
+      "salary": "80000",
       "phone": "+358567890",
       "email": "hekki@gmail.com",
       "animal": "Penguin 🐧",
       "startDate": "2019-01-22",
-      "location": "London ",
+      "location": "Dra",
       "department": "Production",
       "skills": [
         "Auto CAD inventor",
@@ -244,17 +244,17 @@
     {
       "id": "f5de1111",
       "name": "Elias Bekele Tekle",
-      "title": "dr",
-      "salary": 1234567,
+      "title": "Lecturer ",
+      "salary": 500000,
       "phone": "0403232573",
       "email": "eliobais@gmail.com",
-      "animal": "🐱",
-      "startDate": "2025-05-26",
-      "location": "Jimma ",
-      "department": "Civil Engeenering ",
+      "animal": "🐯",
+      "startDate": "2025-06-19",
+      "location": "Helsinki",
+      "department": "Nursing",
       "skills": [
-        "Care",
-        "Hoito"
+        "Teaching",
+        "Research and Consultancy"
       ]
     }
   ]

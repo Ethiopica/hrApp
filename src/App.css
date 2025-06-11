@@ -6,15 +6,16 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: var(--background-color);
 }
 
 /* Header Styles */
 header {
-  background-color: var(--color-primary);
-  color: var(--color-text-light);
+  background-color: var(--header-bg);
+  color: var(--header-text);
   padding: var(--spacing-lg) var(--spacing-xl);
   text-align: center;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--card-shadow);
   position: relative;
   z-index: 10;
 }
@@ -30,24 +31,22 @@ main {
   flex: 1;
   background: linear-gradient(
     135deg,
-    var(--color-primary),
-    var(--color-secondary)
+    var(--gradient-start),
+    var(--gradient-end)
   );
   padding: var(--spacing-xl);
-
-  align-items: center;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--spacing-lg);
 }
 
 /* Footer Styles */
 footer {
-  background-color: var(--color-primary);
-  color: var(--color-text-light);
+  background-color: var(--header-bg);
+  color: var(--header-text);
   padding: var(--spacing-md) var(--spacing-xl);
   text-align: center;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--card-shadow);
 }
 
 /* Paragraph Styles */
@@ -60,28 +59,29 @@ p {
 
 /* Person Component Styling */
 .person {
-  background: var(--color-surface);
+  background: var(--card-bg);
   padding: var(--spacing-lg);
   border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--card-shadow);
   width: min(100%, 400px);
   transition: transform var(--transition-normal),
     box-shadow var(--transition-normal);
+  border: 1px solid var(--border-color);
 }
 
 .person:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--card-shadow);
 }
 
 .person h2 {
-  color: var(--color-primary);
+  color: var(--primary-color);
   margin-bottom: var(--spacing-md);
   font-weight: 600;
 }
 
 .person p {
-  color: var(--color-text);
+  color: var(--card-text);
   margin: var(--spacing-sm) 0;
   line-height: var(--line-height-base);
 }
@@ -91,12 +91,12 @@ p {
   main {
     padding: var(--spacing-md);
   }
-
+  
   header,
   footer {
     padding: var(--spacing-md);
   }
-
+  
   .person {
     width: 100%;
   }
@@ -124,7 +124,7 @@ p {
     animation: none;
     transition: none;
   }
-
+  
   .person:hover {
     transform: none;
   }
