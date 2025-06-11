@@ -49,7 +49,7 @@ const PersonList = () => {
 
   const fetchEmployees = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/employees");
+      const response = await axios.get("https://hrapp-backend-2.onrender.com/employees");
       setEmployees(response.data);
       setLoading(false);
     } catch (err) {
@@ -72,7 +72,7 @@ const PersonList = () => {
             : editValue,
       };
 
-      await axios.patch(`http://localhost:3001/employees/${id}`, updatedField);
+      await axios.patch(`https://hrapp-backend-2.onrender.com/employees/${id}`, updatedField);
 
       setEditingField(null);
       setEditValue("");
@@ -87,7 +87,7 @@ const PersonList = () => {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`http://localhost:3001/employees/${id}`);
+      await axios.delete(`https://hrapp-backend-2.onrender.com/employees/${id}`);
       setEmployees((prevEmployees) => prevEmployees.filter((emp) => emp.id !== id));
     } catch (err) {
       setError("Failed to delete employee");

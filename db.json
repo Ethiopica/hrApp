@@ -1,6 +1,24 @@
 {
   "employees": [
     {
+      "id": 1,
+      "name": "John Doe",
+      "position": "Software Engineer",
+      "department": "Engineering",
+      "email": "john.doe@example.com",
+      "phone": "123-456-7890",
+      "createdAt": 1647123456789
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "position": "Product Manager",
+      "department": "Product",
+      "email": "jane.smith@example.com",
+      "phone": "098-765-4321",
+      "createdAt": 1647123456790
+    },
+    {
       "id": "2",
       "name": "Ville",
       "title": "Welding",
@@ -50,226 +68,6 @@
         "Python",
         "Tableau",
         "Next.js"
-      ]
-    },
-    {
-      "id": "5",
-      "name": "Emma Brown",
-      "title": "HR Specialist",
-      "salary": 67000,
-      "phone": "555-9876",
-      "email": "emma.brown@example.com",
-      "animal": "Koala 🐨",
-      "startDate": "2022-04-05",
-      "location": "Chicago",
-      "department": "Human Resources",
-      "skills": [
-        "Recruiting",
-        "Onboarding",
-        "Conflict Resolution"
-      ]
-    },
-    {
-      "id": "6",
-      "name": "Frank Wu",
-      "title": "DevOps Engineer",
-      "salary": 92000,
-      "phone": "555-2468",
-      "email": "frank.wu@example.com",
-      "animal": "Lion 🦁",
-      "startDate": "2020-08-12",
-      "location": "New York",
-      "department": "Engineering",
-      "skills": [
-        "AWS",
-        "Docker",
-        "CI/CD"
-      ]
-    },
-    {
-      "id": "7",
-      "name": "Grace Kim",
-      "title": "QA Engineer",
-      "salary": 75000,
-      "phone": "555-1122",
-      "email": "grace.kim@example.com",
-      "animal": "Bear 🐻",
-      "startDate": "2021-11-01",
-      "location": "Boston",
-      "department": "Quality Assurance",
-      "skills": [
-        "Selenium",
-        "Cypress",
-        "Jest"
-      ]
-    },
-    {
-      "id": "9",
-      "name": "Isla Green",
-      "title": "Marketing Specialist",
-      "salary": 71000,
-      "phone": "555-5566",
-      "email": "isla.green@example.com",
-      "animal": "Swan 🦢",
-      "startDate": "2020-02-24",
-      "location": "Denver",
-      "department": "Marketing",
-      "skills": [
-        "SEO",
-        "Email Marketing",
-        "Google Ads"
-      ]
-    },
-    {
-      "id": "10",
-      "name": "Jack Thompson",
-      "title": "IT Support",
-      "salary": "620006000",
-      "phone": "555-7788",
-      "email": "jack.thompson@example.com",
-      "animal": "Dove 🕊️",
-      "startDate": "2009-09-09",
-      "location": "Addis Ababa",
-      "department": "IT",
-      "skills": [
-        "Helpdesk",
-        "Networking",
-        "Hardware"
-      ]
-    },
-    {
-      "id": "b05e",
-      "name": "Elias Bekele Tekle",
-      "title": "as",
-      "salary": 3453,
-      "phone": "0403232573",
-      "email": "eliobais@gmail.com",
-      "animal": "Cat",
-      "startDate": "2020-04-02",
-      "department": "Production",
-      "skills": [
-        "CNC Lathe"
-      ]
-    },
-    {
-      "id": "b05e11",
-      "name": "Elias Bekele Tekle",
-      "title": "erw",
-      "salary": 23424,
-      "phone": "0403232573",
-      "email": "eliobais@gmail.com",
-      "animal": "Lion",
-      "startDate": "2025-05-06",
-      "department": "Production",
-      "skills": [
-        "CNC Lathe"
-      ]
-    },
-    {
-      "id": "b05e111",
-      "name": "Melkam ",
-      "title": "Nurse",
-      "salary": 3500,
-      "phone": "0403232573",
-      "email": "eliobais@gmail.com",
-      "animal": "Sheep",
-      "startDate": "2025-05-11",
-      "location": "Lahti",
-      "department": "Nursing",
-      "skills": [
-        "Care",
-        "Hoito"
-      ]
-    },
-    {
-      "id": "b05e11111",
-      "name": "Elias Bekele Tekle",
-      "title": "Lecturer",
-      "salary": "10000",
-      "phone": "0403232573",
-      "email": "eliobais@gmail.com",
-      "animal": "Dragon",
-      "startDate": "2025-05-07",
-      "location": "Lahti",
-      "department": "Management ",
-      "skills": [
-        "Teaching"
-      ]
-    },
-    {
-      "id": "b05e111111",
-      "name": "Elias Bekele Tekle",
-      "title": "Researcher",
-      "salary": 7000,
-      "phone": "0403232573",
-      "email": "eliobais@gmail.com",
-      "animal": "Eagel",
-      "startDate": "2018-07-07",
-      "location": "Lahti",
-      "department": "Nursing",
-      "skills": [
-        "Teaching"
-      ]
-    },
-    {
-      "id": "b05e1111111",
-      "name": "Elias Bekele Tekle",
-      "title": "yu",
-      "salary": "10000",
-      "phone": "0403232573",
-      "email": "eliobais@gmail.com",
-      "animal": "Lion",
-      "startDate": "2025-05-07",
-      "location": "Lahti",
-      "department": "Production",
-      "skills": [
-        "CNC Lathe"
-      ]
-    },
-    {
-      "id": "f5de111",
-      "name": "Shihab ",
-      "title": "Doctoral candidate ",
-      "salary": 100000,
-      "phone": "11221",
-      "email": "w31@gmail.com",
-      "animal": "got",
-      "startDate": "2025-05-19",
-      "location": "Lahti",
-      "department": "Production",
-      "skills": [
-        "CNC Lathe"
-      ]
-    },
-    {
-      "id": "f5de1111",
-      "name": "Elias Bekele Tekle",
-      "title": "Lecturer ",
-      "salary": 500000,
-      "phone": "0403232573",
-      "email": "eliobais@gmail.com",
-      "animal": "🐯",
-      "startDate": "2025-06-19",
-      "location": "Helsinki",
-      "department": "Nursing",
-      "skills": [
-        "Teaching",
-        "Research and Consultancy"
-      ]
-    },
-    {
-      "id": "f5de11111",
-      "name": "Elias Bekele Tekle",
-      "title": "ytyr",
-      "salary": 787664,
-      "phone": "0403232573",
-      "email": "eliobais@gmail.com",
-      "animal": "🐱",
-      "startDate": "2019-01-08",
-      "location": "Lahti",
-      "department": "Production",
-      "skills": [
-        "CNC Lathe"
       ]
     }
   ]

@@ -426,7 +426,6 @@ nav a.active {
   nav {
     position: fixed;
     top: 0;
-    right: -100%;
     width: 70%;
     height: 100vh;
     background-color: var(--surface-color);
