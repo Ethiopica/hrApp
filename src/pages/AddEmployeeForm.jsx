@@ -25,7 +25,7 @@ const AddEmployeeForm = () => {
   // 🔄 Fetch employees on mount to get the last used ID
   useEffect(() => {
     axios
-      .get("http://localhost:3001/employees")
+      .get("https://hrapp-backend-2.onrender.com/employees")
       .then((res) => {
         const employees = res.data;
         const maxId = employees.reduce((max, emp) => (emp.id > max ? emp.id : max), 0);
@@ -61,14 +61,14 @@ const AddEmployeeForm = () => {
     const skillsArray = formData.skills.split(",").map((skill) => skill.trim());
 
     const newEmployee = {
-      id: lastId + 1, // ✅ assign next available ID
+      id: Date.now().toString(), // ✅ assign next available ID
       ...formData,
       salary: parseFloat(formData.salary),
       skills: skillsArray,
     };
 
     try {
-      await axios.post("http://localhost:3001/employees", newEmployee);
+      await axios.post("https://hrapp-backend-2.onrender.com/employees", newEmployee);
       setFormMessage("✅ Employee added successfully!");
       navigate("/employees");
     } catch (error) {

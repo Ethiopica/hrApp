@@ -1,19 +1,27 @@
-import { NavLink, Link } from "react-router";
+import { NavLink, Link, useNavigate } from "react-router";
 import "./Header.css";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Header = ({ name }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  useEffect(() => {
+    // Redirect from root to about page
+    if (window.location.pathname === '/') {
+      navigate('/about');
+    }
+  }, [navigate]);
+
   return (
     <header>
       <div className="logo">
-        <Link to="/">
+        <Link to="/about">
           <h2>{name}</h2>
         </Link>
       </div>
@@ -22,8 +30,8 @@ const Header = ({ name }) => {
         <span className="hamburger-line"></span>
         <span className="hamburger-line"></span>
       </div>
-      <nav>
-        <ul className={isMenuOpen ? 'active' : ''}>
+      <nav className={isMenuOpen ? 'active' : ''}>
+        <ul>
           <li>
             <NavLink to="/about" className={({ isActive }) => (isActive ? "active" : "")}>
               About
