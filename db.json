@@ -185,7 +185,7 @@
       "id": "b05e11111",
       "name": "Elias Bekele Tekle",
       "title": "Lecturer",
-      "salary": 2500,
+      "salary": "10000",
       "phone": "0403232573",
       "email": "eliobais@gmail.com",
       "animal": "Dragon",
@@ -255,6 +255,21 @@
       "skills": [
         "Teaching",
         "Research and Consultancy"
+      ]
+    },
+    {
+      "id": "f5de11111",
+      "name": "Elias Bekele Tekle",
+      "title": "ytyr",
+      "salary": 787664,
+      "phone": "0403232573",
+      "email": "eliobais@gmail.com",
+      "animal": "🐱",
+      "startDate": "2019-01-08",
+      "location": "Lahti",
+      "department": "Production",
+      "skills": [
+        "CNC Lathe"
       ]
     }
   ]

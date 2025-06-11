@@ -8,8 +8,8 @@ const Root = () => {
     <Header name="Elias B. Tekle" />
       <main>
       <Outlet />
-      
       </main>
+      
       <Footer year={2025} />
     </>
   );
